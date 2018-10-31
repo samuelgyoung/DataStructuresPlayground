@@ -2,6 +2,8 @@ import org.apache.log4j.Logger;
 
 import com.l33tindustries.tools.datastructure.ArrayDS;
 import com.l33tindustries.tools.datastructure.LinkedListDS;
+import com.l33tindustries.tools.datastructure.StackDS;
+import com.l33tindustries.tools.datastructure.StackDS.Stack;
 
 public class DataStucturesPlayground 
 {
@@ -27,9 +29,34 @@ public class DataStucturesPlayground
 	{
 		logger.trace(getCurrentMethodName() + " Entering ");
 		//testArray();
-		testLinkedList();
+		//testLinkedList();
+		testStack();
 		
 		logger.trace(getCurrentMethodName() + " Exiting ");
+	}
+	
+	public static void testStack()
+	{
+		StackDS Stack_001 = new StackDS();
+		Stack stack_001 = Stack_001.createStack();
+		
+		Stack_001.printStack(stack_001);
+		Stack_001.pushStack("test1", stack_001);
+		System.out.println("Data in stack: " + Stack_001.stackTop(stack_001));
+		Stack_001.pushStack("test2", stack_001);
+		System.out.println("Data in stack: " + Stack_001.stackTop(stack_001));
+		Stack_001.printStack(stack_001);
+		Stack_001.printStack(stack_001);
+		Stack_001.popStack(stack_001);
+		System.out.println("Data in stack: " + Stack_001.stackTop(stack_001));
+		Stack_001.printStack(stack_001);
+		Stack_001.pushStack("test2", stack_001);
+		Stack_001.pushStack("test3", stack_001);
+		Stack_001.printStack(stack_001);
+		
+		Stack stack_002 = Stack_001.reverseStack(stack_001);
+		Stack_001.printStack(stack_002);
+		
 	}
 	
 	public static void testLinkedList()
