@@ -2,6 +2,7 @@ import org.apache.log4j.Logger;
 
 import com.l33tindustries.tools.datastructure.ArrayDS;
 import com.l33tindustries.tools.datastructure.LinkedListDS;
+import com.l33tindustries.tools.datastructure.Recursion;
 import com.l33tindustries.tools.datastructure.StackDS;
 import com.l33tindustries.tools.datastructure.StackDS.Stack;
 
@@ -30,9 +31,16 @@ public class DataStucturesPlayground
 		logger.trace(getCurrentMethodName() + " Entering ");
 		//testArray();
 		//testLinkedList();
-		testStack();
+		//testStack();
+		testRecursion();
 		
 		logger.trace(getCurrentMethodName() + " Exiting ");
+	}
+	
+	public static void testRecursion()
+	{
+		Recursion Recursion_001 = new Recursion();
+		System.out.println(Recursion_001.iterativeFactorial(5));
 	}
 	
 	public static void testStack()
