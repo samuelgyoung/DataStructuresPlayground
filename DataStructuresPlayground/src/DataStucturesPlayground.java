@@ -35,7 +35,7 @@ public class DataStucturesPlayground
 		//testLinkedList();
 		//testStack();
 		//testQueue();
-		testRecursion();
+		//testRecursion();
 		
 		logger.trace(getCurrentMethodName() + " Exiting ");
 	}
