@@ -2,6 +2,8 @@ import org.apache.log4j.Logger;
 
 import com.l33tindustries.tools.datastructure.ArrayDS;
 import com.l33tindustries.tools.datastructure.LinkedListDS;
+import com.l33tindustries.tools.datastructure.QueueDS;
+import com.l33tindustries.tools.datastructure.QueueDS.Queue;
 import com.l33tindustries.tools.datastructure.Recursion;
 import com.l33tindustries.tools.datastructure.StackDS;
 import com.l33tindustries.tools.datastructure.StackDS.Stack;
@@ -32,6 +34,7 @@ public class DataStucturesPlayground
 		//testArray();
 		//testLinkedList();
 		//testStack();
+		//testQueue();
 		testRecursion();
 		
 		logger.trace(getCurrentMethodName() + " Exiting ");
@@ -42,6 +45,23 @@ public class DataStucturesPlayground
 		Recursion Recursion_001 = new Recursion();
 		System.out.println(Recursion_001.iterativeFactorial(5));
 	}
+	
+	public static void testQueue()
+	{
+		QueueDS QueueDS_001 = new QueueDS();
+		Queue queue_001 = QueueDS_001.createQueue();
+		QueueDS_001.enqueue("Test1", queue_001);
+		QueueDS_001.enqueue("Test2", queue_001);
+		QueueDS_001.enqueue("Test3", queue_001);
+		QueueDS_001.enqueue("Test4", queue_001);
+		QueueDS_001.enqueue("Test5", queue_001);
+		QueueDS_001.printQueue(queue_001);
+		QueueDS_001.dequeue(queue_001);
+		QueueDS_001.printQueue(queue_001);
+		System.out.println(QueueDS_001.queueFront(queue_001));
+
+	}
+	
 	
 	public static void testStack()
 	{
