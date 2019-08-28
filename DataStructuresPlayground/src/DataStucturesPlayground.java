@@ -1,6 +1,7 @@
 import org.apache.log4j.Logger;
 
 import com.l33tindustries.tools.datastructure.ArrayDS;
+import com.l33tindustries.tools.datastructure.BinaryDS;
 import com.l33tindustries.tools.datastructure.LinkedListDS;
 import com.l33tindustries.tools.datastructure.QueueDS;
 import com.l33tindustries.tools.datastructure.QueueDS.Queue;
@@ -36,8 +37,20 @@ public class DataStucturesPlayground
 		//testStack();
 		//testQueue();
 		//testRecursion();
+		testBinaryDS();
 		
 		logger.trace(getCurrentMethodName() + " Exiting ");
+	}
+	
+	public static void testBinaryDS()
+	{
+		BinaryDS BinaryDS_001 = new BinaryDS(0);
+		System.out.println(BinaryDS_001.getRootNode());
+		BinaryDS_001.insertBST(BinaryDS_001.getRootNode(), 1);
+		System.out.println(BinaryDS_001.getRootNode());
+		BinaryDS_001.insertBST(BinaryDS_001.getRootNode(), 2);
+		System.out.println(BinaryDS_001.getRootNode());
+		
 	}
 	
 	public static void testRecursion()
